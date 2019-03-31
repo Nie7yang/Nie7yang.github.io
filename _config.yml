@@ -7,7 +7,7 @@
 
 # Site settings
 title: 水文FUN
-brief-intro: 菜鸟水文研究生
+brief-intro: 模型训练站
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nie7yang.github.io" # the base hostname & protocol for your site
 
@@ -19,7 +19,7 @@ email: 459412615@QQ.com
 
 dribbble_username:
 
-description_footer: 来自Nie的研究记录！
+description_footer: 来自Nie的模拟
 
 # comments
 # two ways to comment, only choose one, and use your own short name

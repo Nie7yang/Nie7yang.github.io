@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title:  "第一篇测试文章"
+title:  "测试文件"
 categories: Nie
 tags:  Fortran C#
 author: 
@@ -11,7 +11,7 @@ author:
 
 ## 目的：
 
-写这篇文章的目的主要是为了测试在本地进行md文件的编写是否能使用hexo进行html生成，然后上传到github上，
+写这篇文章的目的主要是为了测试在本地进行md文件的编写是否能使用hexo进行html生成
 ![Image text](https://github.com/Nie7yang/Nie7yang.github.io/raw/master/img/11.png)
 
 
@@ -58,33 +58,11 @@ Configuration file: F:/myself/643435675.github.io/_config.yml
 
 ```
 
-主要进行了以上操作：
-cd 643435675.github.io  文件夹下
 
-执行命令：
-
-`gem install jekyll `
-
-下一步：
-`jekyll s`
-
-接下来：
-`jekyll serve`
-
-然后这样就可以在浏览器中输入：http://127.0.0.1:4001/ 进行刚刚文章的访问了。
-
-
-补充：
-
-因为首页与详情页显示某篇文章的内容是不一样的，在首页中进行文章的裁剪显示：
-需要进行加入四个空行：
 ```md
 ## 目的：
 
-写这篇文章的目的主要是为了测试在本地进行md文件的编写是否能使用hexo进行html生成，然后上传到github上，通过访问https://day21.top 这个网站查看能否看到最新的文章
-
-
-
+写这篇文章的目的主要是为了测试在本地进行md文件的编写是否能使用hexo进行html生成
 
 ## 操作步骤：
 ```
