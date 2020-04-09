@@ -13,20 +13,18 @@ type: page
 
 <iframe src="https://githubbadge.appspot.com/Nie7yang" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
 
-水文菜鸟，硕士在读。
+水保菜鸟。
 
 
 
 ## 联系我
 
 * GitHub：https://github.com/Nie7yang
-* email：459412615@qq.com
+* email：nie7yang@foxmail.com
 
 
-## 关于本站
 
-**模板来自于：https://github.com/643435675
 
-## Comments
+### Comments
 
 {% include comments.html %}
