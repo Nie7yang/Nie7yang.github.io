@@ -2,7 +2,7 @@
 layout: post
 title:  "Fortran-OpenMP 学习笔记"
 categories: Nie
-tags:  Fortran OpeMP
+tags:  Fortran OpenMP
 author: 
 ---
 
