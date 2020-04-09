@@ -7,7 +7,7 @@
 
 # Site settings
 title: Ni个人博客
-brief-intro: 记录学习与感悟
+brief-intro: 记录学习
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nie7yang.github.io" # the base hostname & protocol for your site
 
