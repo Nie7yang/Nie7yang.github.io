@@ -1,6 +1,6 @@
 ﻿---
 layout: page
-title: About
+title: 联系
 permalink: /about/
 icon: heart
 type: page
@@ -19,12 +19,10 @@ type: page
 
 ## 联系我
 
-* GitHub：https://github.com/Nie7yang
+
 * email：chaojizhuerchong@163.com
 
 
 
 
-### Comments
 
-{% include comments.html %}
