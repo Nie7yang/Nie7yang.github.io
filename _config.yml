@@ -6,8 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Ni个人博客
-brief-intro: 记录学习
+title: 上海市水土保持公示网
+brief-intro: Shanghai Water and Soil Conservation Publicity
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nie7yang.github.io" # the base hostname & protocol for your site
 
@@ -19,7 +19,7 @@ email: nie7yang@foxmail.com
 
 dribbble_username:
 
-description_footer: 来自Ni
+description_footer: 管理员
 
 # comments
 # two ways to comment, only choose one, and use your own short name
