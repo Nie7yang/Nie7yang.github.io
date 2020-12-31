@@ -4,7 +4,7 @@ layout: default
 
 <div class="page clearfix" index>
     <div class="left">
-        <!--<h3>上海市水土保持公示网 </h3>  -->
+        <!--<h1>上海市水土保持公示网 </h1>  -->
         <hr>
         <ul>
             {% for post in paginator.posts %}
@@ -70,7 +70,7 @@ layout: default
             <div class="side">
                 <div>
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    Recent Posts
+                    最近公示
                 </div>
                 <ul class="content-ul" recent>
                     {% for post in site.posts offset: 0 limit: 10  %}
@@ -83,7 +83,7 @@ layout: default
             <div class="side ">
                 <div>
                     <i class="fa fa-th-list"></i>
-                    Categories
+                    分区公示
                 </div>
                 <ul class="content-ul" cate>
                     {% for category in site.categories %}
@@ -102,7 +102,7 @@ layout: default
             <div class="side">
                 <div>
                     <i class="fa fa-tags"></i>
-                    Tags
+                    公示类型
                 </div>
                 <div class="tags-cloud">
                     {% assign first = site.tags.first %}
