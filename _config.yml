@@ -9,7 +9,7 @@
 title: 上海市水土保持公示网
 brief-intro: Shanghai Water and Soil Conservation Publicity
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://nie7yang.github.io" # the base hostname & protocol for your site
+#url: "https://nie7yang.github.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
