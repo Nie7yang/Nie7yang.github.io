@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Research Portfolio</title>
+  <style>
+    /* 添加一些基本样式，你可以根据需要进行调整 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>My Research Portfolio</h1>
+    <div>
+      <!-- 语言切换按钮 -->
+      <button onclick="switchLanguage('en')">English</button>
+      <button onclick="switchLanguage('zh')">中文</button>
+    </div>
+  </header>
+  <main>
+    <!-- 这里是你的内容，根据需要添加其他的HTML结构和内容 -->
+    <!-- 注意：在这里你需要使用JavaScript来根据语言切换显示内容 -->
+  </main>
+  <script>
+    // JavaScript部分，用于切换显示语言的内容
+    function switchLanguage(language) {
+      // 获取所有带有"lang"属性的元素
+      const elements = document.querySelectorAll('[lang]');
+      for (const element of elements) {
+        // 如果元素的"lang"属性值与目标语言相同，则显示该元素，否则隐藏该元素
+        if (element.getAttribute('lang') === language) {
+          element.style.display = 'block';
+        } else {
+          element.style.display = 'none';
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
