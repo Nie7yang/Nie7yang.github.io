@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NIE QIYANG</title>
+  <title>My Research Portfolio</title>
   <style>
-    /* 添加一些基本样式*/
+    /* 添加一些基本样式，你可以根据需要进行调整 */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -18,6 +18,26 @@
       color: #fff;
       padding: 10px;
       text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .language-btn {
+      margin-left: 10px;
+      padding: 5px 10px;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .en-btn {
+      background-color: #007bff; /* 英文按钮颜色 */
+    }
+
+    .zh-btn {
+      background-color: #dc3545; /* 中文按钮颜色 */
     }
 
     main {
@@ -28,16 +48,26 @@
 
 <body>
   <header>
-    <h1>Nie Qiyang</h1>
+    <h1>My Research Portfolio</h1>
     <div>
       <!-- 语言切换按钮 -->
-      <button onclick="switchLanguage('en')">English</button>
-      <button onclick="switchLanguage('zh')">中文</button>
+      <button class="language-btn en-btn" onclick="switchLanguage('en')">English</button>
+      <button class="language-btn zh-btn" onclick="switchLanguage('zh')">中文</button>
     </div>
   </header>
   <main>
     <!-- 这里是你的内容，根据需要添加其他的HTML结构和内容 -->
     <!-- 注意：在这里你需要使用JavaScript来根据语言切换显示内容 -->
+    <div lang="en">
+      <!-- 英文内容 -->
+      <h2>My Research Experience</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+    </div>
+    <div lang="zh" style="display: none;">
+      <!-- 中文内容 -->
+      <h2>我的科研经历</h2>
+      <p>中文内容......</p>
+    </div>
   </main>
   <script>
     // JavaScript部分，用于切换显示语言的内容
@@ -51,6 +81,17 @@
         } else {
           element.style.display = 'none';
         }
+      }
+
+      // 切换按钮颜色
+      const enBtn = document.querySelector('.en-btn');
+      const zhBtn = document.querySelector('.zh-btn');
+      if (language === 'en') {
+        enBtn.style.backgroundColor = '#007bff';
+        zhBtn.style.backgroundColor = '';
+      } else {
+        enBtn.style.backgroundColor = '';
+        zhBtn.style.backgroundColor = '#dc3545';
       }
     }
   </script>
