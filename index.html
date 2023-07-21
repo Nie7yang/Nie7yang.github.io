@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+
 
 <head>
   <meta charset="UTF-8">
@@ -11,11 +11,34 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      overflow: hidden; /* 禁止页面滚动条出现 */
+      background-color: rgb(72, 72, 75); /* 设置背景颜色为黑色 */
+    }
+
+    .tiled-image-container {
+      position: relative;
+      width: 50%;
+      height: 100px;
+      margin:  auto;
+      border: 0px solid #fbfbfb; /* 可根据需要调整 */
+      z-index: 4;
+    }
+
+    .tiled-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/Users/nieqiyang/Downloads/IMG_5624.jpg'); /* 替换为你的图片路径 */
+      background-repeat: repeat; /* 设置平铺方式 */
+      background-size:  17% ; 
+      
     }
 
     header {
-      background-color: #333;
-      color: #fff;
+      background-color: #ffffff;
+      color: #000000;
       padding: 10px;
       text-align: center;
       display: flex;
@@ -40,6 +63,10 @@
       background-color: #dc3545; /* 中文按钮颜色 */
     }
 
+    .ja-btn {
+      background-color: #28a745; /* 日语按钮颜色 */
+    }
+
     main {
       padding: 20px;
     }
@@ -49,10 +76,14 @@
 <body>
   <header>
     <h1>My Research Portfolio</h1>
+    <div class="tiled-image-container">
+        <div class="tiled-image"></div>
+      </div>
     <div>
       <!-- 语言切换按钮 -->
       <button class="language-btn en-btn" onclick="switchLanguage('en')">English</button>
       <button class="language-btn zh-btn" onclick="switchLanguage('zh')">中文</button>
+      <button class="language-btn ja-btn" onclick="switchLanguage('ja')">日本語</button>
     </div>
   </header>
   <main>
@@ -67,6 +98,11 @@
       <!-- 中文内容 -->
       <h2>我的科研经历</h2>
       <p>中文内容......</p>
+    </div>
+    <div lang="ja" style="display: none;">
+      <!-- 日语内容 -->
+      <h2>私の研究経験</h2>
+      <p>日本語内容......</p>
     </div>
   </main>
   <script>
@@ -86,12 +122,22 @@
       // 切换按钮颜色
       const enBtn = document.querySelector('.en-btn');
       const zhBtn = document.querySelector('.zh-btn');
+      const jaBtn = document.querySelector('.ja-btn');
       if (language === 'en') {
-        enBtn.style.backgroundColor = '#007bff';
+        enBtn.style.backgroundColor = '#667';
         zhBtn.style.backgroundColor = '';
-      } else {
+        jaBtn.style.backgroundColor = '';
+        document.body.style.backgroundColor  = '#87CEFA';
+      } else if (language === 'zh') {
         enBtn.style.backgroundColor = '';
-        zhBtn.style.backgroundColor = '#dc3545';
+        zhBtn.style.backgroundColor = '#667';
+        jaBtn.style.backgroundColor = '';
+        document.body.style.backgroundColor  = '#FFF0F5';
+      } else if (language === 'ja') {
+        enBtn.style.backgroundColor = '';
+        zhBtn.style.backgroundColor = '';
+        jaBtn.style.backgroundColor = '#667';
+        document.body.style.backgroundColor  = '#F0FFF0';
       }
     }
   </script>
