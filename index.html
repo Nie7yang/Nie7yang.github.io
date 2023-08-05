@@ -1,146 +1,73 @@
 <!DOCTYPE html>
-
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Research Portfolio</title>
-  <style>
-    /* 添加一些基本样式，你可以根据需要进行调整 */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      overflow: hidden; /* 禁止页面滚动条出现 */
-      background-color: rgb(72, 72, 75); /* 设置背景颜色为黑色 */
-    }
-
-    .tiled-image-container {
-      position: relative;
-      width: 50%;
-      height: 100px;
-      margin:  auto;
-      border: 0px solid #fbfbfb; /* 可根据需要调整 */
-      z-index: 4;
-    }
-
-    .tiled-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('pic/IMG_5624.jpg'); /* 替换为你的图片路径 */
-      background-repeat: repeat; /* 设置平铺方式 */
-      background-size:  17% ; 
-      
-    }
-
-    header {
-      background-color: #ffffff;
-      color: #000000;
-      padding: 10px;
-      text-align: center;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .language-btn {
-      margin-left: 10px;
-      padding: 5px 10px;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .en-btn {
-      background-color: #007bff; /* 英文按钮颜色 */
-    }
-
-    .zh-btn {
-      background-color: #dc3545; /* 中文按钮颜色 */
-    }
-
-    .ja-btn {
-      background-color: #28a745; /* 日语按钮颜色 */
-    }
-
-    main {
-      padding: 20px;
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <h1>My Research Portfolio</h1>
-    <div class="tiled-image-container">
-        <div class="tiled-image"></div>
-      </div>
-    <div>
-      <!-- 语言切换按钮 -->
-      <button class="language-btn en-btn" onclick="switchLanguage('en')">English</button>
-      <button class="language-btn zh-btn" onclick="switchLanguage('zh')">中文</button>
-      <button class="language-btn ja-btn" onclick="switchLanguage('ja')">日本語</button>
-    </div>
-  </header>
-  <main>
-    <!-- 这里是你的内容，根据需要添加其他的HTML结构和内容 -->
-    <!-- 注意：在这里你需要使用JavaScript来根据语言切换显示内容 -->
-    <div lang="en">
-      <!-- 英文内容 -->
-      <h2>My Research Experience</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
-    </div>
-    <div lang="zh" style="display: none;">
-      <!-- 中文内容 -->
-      <h2>我的科研经历</h2>
-      <p>中文内容......</p>
-    </div>
-    <div lang="ja" style="display: none;">
-      <!-- 日语内容 -->
-      <h2>私の研究経験</h2>
-      <p>日本語内容......</p>
-    </div>
-  </main>
-  <script>
-    // JavaScript部分，用于切换显示语言的内容
-    function switchLanguage(language) {
-      // 获取所有带有"lang"属性的元素
-      const elements = document.querySelectorAll('[lang]');
-      for (const element of elements) {
-        // 如果元素的"lang"属性值与目标语言相同，则显示该元素，否则隐藏该元素
-        if (element.getAttribute('lang') === language) {
-          element.style.display = 'block';
-        } else {
-          element.style.display = 'none';
+    <meta charset="UTF-8">
+    <title>Nie Qiyang</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("pic/dem.gif");
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            backdrop-filter: blur(1px); /* 添加毛玻璃效果 */
+            gap: 30px
         }
-      }
 
-      // 切换按钮颜色
-      const enBtn = document.querySelector('.en-btn');
-      const zhBtn = document.querySelector('.zh-btn');
-      const jaBtn = document.querySelector('.ja-btn');
-      if (language === 'en') {
-        enBtn.style.backgroundColor = '#667';
-        zhBtn.style.backgroundColor = '';
-        jaBtn.style.backgroundColor = '';
-        document.body.style.backgroundColor  = '#87CEFA';
-      } else if (language === 'zh') {
-        enBtn.style.backgroundColor = '';
-        zhBtn.style.backgroundColor = '#667';
-        jaBtn.style.backgroundColor = '';
-        document.body.style.backgroundColor  = '#FFF0F5';
-      } else if (language === 'ja') {
-        enBtn.style.backgroundColor = '';
-        zhBtn.style.backgroundColor = '';
-        jaBtn.style.backgroundColor = '#667';
-        document.body.style.backgroundColor  = '#F0FFF0';
-      }
-    }
-  </script>
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 110px;
+            height: 110px;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-align: center;
+            font-weight: bold;
+            color: #0c0c0c;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 18px 18px 30px rgba(0,0, 0, 0.2),
+                        -18px -18px 30px rgba(255, 255, 255, 1);
+            transition: all .2s ease-out;
+            border: 2px solid white;;
+        }
+
+        /* 设置不同按钮的背景颜色 */
+        button:nth-child(1) {   
+            color: rgb(47, 18, 177);
+        }
+
+        button:nth-child(2) {
+            color: rgb(126, 40, 40);
+        }
+
+        button:nth-child(3) {
+            color: rgb(60, 75, 53);
+        }
+
+        button:hover {
+            cursor: pointer;
+            box-shadow: 0 0 0 rgba(0,0,0,0.2),
+                        0 0 0 rgba(255, 255, 255, 0.8),
+            inset 18px 18px 30px rgba(0,0, 0, 0.1),
+            inset -18px -18px 30px rgba(255, 255, 255, 1);
+            filter: brightness(110%);
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="window.location.href = 'index_en.html';">English</button>
+    <button onclick="window.location.href = 'index_ja.html';">日本語</button>
+    <button onclick="window.location.href = 'index_zh.html';">中文</button>
 </body>
-
 </html>
