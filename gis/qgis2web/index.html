@@ -6,20 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EFDC Input Editor</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Honk:MORF,SHLN@5,59.4&display=swap');
+
+        .honk {
+            font-family: "Honk", system-ui;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "MORF" 28,
+                "SHLN" 64.2;
+        }
+
+        .bungee-shade-regular {
+            font-family: "Bungee Shade", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            width: 80%;
+            font-family: "Honk", system-ui;
+            margin: 0 auto;
+            background-color: #B3CFCD;
         }
 
         label {
+            font-family: "Bungee Shade", sans-serif;
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            font-size: 2em;
+            margin-left: 10%;
         }
 
-        select,
-        textarea {
-            width: 100%;
+        select {
+            width: 80%;
+            height: 50px;
             margin-bottom: 10px;
+            border-radius: 20px;
+            font-size: 16px;
+            padding-left: 10px;
+            margin-left: 10%;
+        }
+
+        select option {
+            font-size: 16px;
+            /* 根据需要调整字体大小 */
+        }
+
+        textarea {
+            width: 80%;
+            height: 200px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            border-radius: 10px;
+            padding-top: 10px;
+            padding-left: 10px;
+            /* 根据需要调整向右移动的距离 */
+            margin-left: 10%;
         }
 
         button {
@@ -29,11 +73,76 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin: 0 auto;
+
         }
 
         button:hover {
             background-color: #45a049;
         }
+
+        .button-container {
+            text-align: center;
+            /* 设置按钮水平居中显示 */
+            margin-top: 20px;
+            /* 设置按钮与上方的距离，根据需要调整 */
+        }
+
+        .button {
+            padding: 10px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            margin-right: 50px;
+            /* 设置按钮之间的间距，根据需要调整 */
+        }
+
+        .button.blue {
+            background-color: #E9A431;
+            /* 修改颜色值为你想要的第一个颜色 */
+        }
+
+        .button.red {
+            background-color: #00613A;
+            /* 修改颜色值为你想要的第二个颜色 */
+        }
+
+        .button.green {
+            background-color: #D83C2D;
+            /* 修改颜色值为你想要的第三个颜色 */
+        }
+
+        .button,
+        .button.blue,
+        .button.red,
+        .button.green {
+            display: inline-block;
+            /* 使用 inline-block 使按钮在同一行显示 */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 7em;
+            /* 调整字号大小，可以根据需要更改 */
+            margin-bottom: 10px;
+            /* 可选：调整标题下方的间距 */
+            margin-top: 10px;
+        }
+
+        .footer-link {
+            position: fixed;
+            bottom: 5%;
+            right: 18%;
+            
+            /* 设置背景颜色 */
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* 可选：添加阴影效果 */
+        }
+
     </style>
 </head>
 
@@ -45,10 +154,15 @@
 
     <label for="textInput">Card Content:</label>
     <textarea id="textInput" rows="10"></textarea>
-
-    <button onclick="loadFile()">Load File</button>
-    <button id="button1" onclick="confirmChanges()">Confirm Changes</button>
-    <button onclick="saveFile()">Save File</button>
+    <input type="file" id="fileInput" style="display: none" accept=".inp">
+    <div class="button-container">
+        <button class="button blue" onclick="openFileSelector()">Load File</button>
+        <button class="button red" id="button1" onclick="confirmChanges()">Confirm Changes</button>
+        <button class="button green" onclick="saveFile()">Save File</button>
+    </div>
+    <div class="footer-link">
+        <a href="https://nie7yang.github.io/" target="_blank">Nie Qiyang</a>
+    </div>
     <script>
 
         var optionData = {};
@@ -75,22 +189,22 @@
         // JavaScript functions to interact with the UI
         function updateTextarea(kk) {
 
-            if (kk==0){
-            var selectedOption = 0;
-            var selectedCard = Card[selectedOption];
+            if (kk == 0) {
+                var selectedOption = 0;
+                var selectedCard = Card[selectedOption];
             }
-            else{
-            // 获取当前选中的选项
-            var selectedOption = document.getElementById("cardSelector").selectedIndex;
-            // 获取与选项对应的文本内容
-            var selectedCard = Card[selectedOption];
+            else {
+                // 获取当前选中的选项
+                var selectedOption = document.getElementById("cardSelector").selectedIndex;
+                // 获取与选项对应的文本内容
+                var selectedCard = Card[selectedOption];
             }
 
             // 获取文本框元素并设置其值
             document.getElementById("textInput").value = optionData[selectedOption];
 
             // 获取按钮元素并设置其文本
-            document.getElementById("button1").innerText = "确认修改" + selectedCard;
+            document.getElementById("button1").innerText = "Change: " + selectedCard;
         }
 
         function confirmChanges() {
@@ -102,60 +216,67 @@
 
             // 获取文本框元素并设置其值
             optionData[selectedOption] = document.getElementById("textInput").value;
-
-            // 实现逻辑以确认更改
-            alert("已修改" + Card[selectedOption] + "!");
         }
 
-        function loadFile() {
-            // 创建一个 input 元素，用于触发文件选择对话框
-            var input = document.createElement("input");
-            input.type = "file";
-            input.accept = ".inp";  // 设置接受的文件类型
-
-            // 添加 change 事件监听器，当用户选择文件后执行逻辑
-            input.addEventListener("change", function () {
-                var file = input.files[0];
-
-                if (file) {
-                    var reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        var fileContent = e.target.result;
-
-                        // 模拟 C# 代码中的处理逻辑，将文件内容分块并存储到相应的数组中
-                        var blocks = fileContent.split("-------------------------------------------------------------------------------");
-                        blocks = blocks.map(function (block) {
-                            return block.trim();
-                        });
-
-                        // 更新 optionData 数组
-                        for (var i = 0; i < CardTitleC.length && i < blocks.length; i++) {
-                            optionData[i] = blocks[i];
-                        }
-
-                        // 更新界面元素
-                        var selectedOption = document.getElementById("cardSelector").selectedIndex;
-                        document.getElementById("textInput").value = optionData[selectedOption];
-
-                        // 弹出提示
-                        alert("文件已加载");
-                    };
-
-                    reader.readAsText(file);
-                }
-            });
+        function openFileSelector() {
+            // 模拟点击文件选择器
+            document.getElementById('fileInput').click();
         }
+
+        // 当文件选择器内容发生变化时触发
+        document.getElementById('fileInput').addEventListener('change', function (event) {
+            var fileInput = event.target;
+            var file = fileInput.files[0];
+            if (file) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var fileContent = e.target.result;
+                    // 模拟 C# 代码中的处理逻辑，将文件内容分块并存储到相应的数组中
+                    var blocks = fileContent.split("-------------------------------------------------------------------------------");
+                    blocks = blocks.map(function (block) {
+                        return block.trim();
+                    });
+
+                    // 更新 optionData 数组
+                    for (var i = 0; i < Card.length && i < blocks.length; i++) {
+                        optionData[i] = blocks[i];
+                    }
+
+                    // 更新界面元素
+                    var selectedOption = document.getElementById("cardSelector").selectedIndex;
+                    document.getElementById("textInput").value = optionData[selectedOption];
+                };
+                reader.readAsText(file);
+            }
+        });
 
         function saveFile() {
-            // Implement logic to save file
-            alert("File saved!");
+            // 将字典（对象）转换为数组
+            var lines = Object.values(optionData).map(function (value) {
+                return value + "\n-------------------------------------------------------------------------------";
+            });
+
+            var fileContent = lines.join("\n");
+            console.log("文件内容:", fileContent);
+            var blob = new Blob([fileContent], { type: "text/plain;charset=utf-8" });
+
+            var downloadLink = document.createElement("a");
+            downloadLink.href = URL.createObjectURL(blob);
+            downloadLink.download = "out_EFDC.inp";
+
+            document.body.appendChild(downloadLink);
+
+            downloadLink.click();
+
+            document.body.removeChild(downloadLink);
+            URL.revokeObjectURL(downloadLink.href);
         }
 
 
         // Populate card selector dropdown with options
         var cardSelector = document.getElementById("cardSelector");
-        var cardTitles = [
+        var cardTitlesC = [
             "C1 项目标题",
             "C1A 网格配置和时间积分模式选择",
             "C2 重启、一般控制和诊断开关",
@@ -274,7 +395,7 @@
             "C91B NETCDF输出选项"
         ];
 
-        cardTitles.forEach(function (title, index) {
+        cardTitlesC.forEach(function (title, index) {
             var option = document.createElement("option");
             option.value = index;
             option.text = title;
