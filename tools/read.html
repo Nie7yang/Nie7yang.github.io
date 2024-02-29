@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoJSON File Upload</title>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="file" id="geojsonInput" accept=".geojson" />
+    <div id="map"></div>
+
+    <script>
+        document.getElementById('geojsonInput').addEventListener('change', handleFileSelect);
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    const geojson = JSON.parse(e.target.result);
+                    displayGeoJSON(geojson);
+                };
+
+                reader.readAsText(file);
+            }
+        }
+
+        function displayGeoJSON(geojson) {
+            // Assuming you have a map library like Leaflet
+            const map = L.map('map').setView([0, 0], 2);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+            L.geoJSON(geojson, {
+                style: function (feature) {
+                    return { color: 'blue', fillOpacity: 0.5 };
+                }
+            }).addTo(map);
+        }
+    </script>
+
+    <!-- Include Leaflet library -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</body>
+
+</html>
