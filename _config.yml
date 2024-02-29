@@ -1,9 +1,5 @@
 # _config.yml
 
 # 指定您的网站的URL路径
-url: https://nie7yang.github.io   # 替换为您的 GitHub 用户名和仓库名称
+url: https://nie7yang.github.io   
 
-# 如果您的网站使用自定义域名，请将域名设置为true，并在CNAME文件中指定域名
-# 使用自定义域名时，请确保在 GitHub 仓库设置中进行了相应的配置
-# 使用自定义域名时，可以省略url设置
-# custom_domain: true
