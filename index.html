@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Nie Qiyang</title>
@@ -145,6 +146,18 @@
                 margin: 10px auto;
             }
         }
+
+        details {
+            margin-bottom: 20px;
+        }
+
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
     </style>
 </head>
 
@@ -177,37 +190,51 @@
         from 2020 to 2023, primarily engaged in design, assessment, and monitoring work related to soil
         and water conservation.</p>
     <p>Graduated from Chang'an University with a master's degree in 2020.</p>
-    <p>My research is primarily focused on hydrological simulation. Currently, I am investigating the 
-        coupling of the Environmental Fluid Dynamics Code (EFDC) with other distributed hydrological 
+    <p>My research is primarily focused on hydrological simulation. Currently, I am investigating the
+        coupling of the Environmental Fluid Dynamics Code (EFDC) with other distributed hydrological
         models to assess the water environment within a watershed.</p>
-    <p>PS. I have temporarily set aside the task of converting my previous Fortran code into Python. I believe that using Python to 
+    <p>PS. I have temporarily set aside the task of converting my previous Fortran code into Python. I believe that
+        using Python to
         enhance post-processing of the original Fortran model's computational results is a more efficient choice.</p>
-    
+
     <div style="margin-top: 26px; margin-bottom: 28px; border: 0.8px solid #dddddd"></div>
 
-    <h2>Curriculum Vitae</h2>
-    <div>2020 - 2023, Hydraulic Engineer in China Three Gorges Corporation Shanghai Research Institute</div>
-    <div>2019.9 - 2019.12, Exchange Study Abroad, Kyoto University Disaster Prevention Research Institute</div>
-    <div>2017 - 2020, Master in Soil and Water Conservation and Desertification Control, Chang'an University</div>
-    <div>2013 - 2017, Bachelor in Soil and Water Conservation and Ecological Engineering, Nanjing Forestry University </div>
+    <details>
+        <summary>
+            <h2>Curriculum Vitae</h2>
+        </summary>
+            <div>
+                2020 - 2023, Hydraulic Engineer in China Three Gorges Corporation Shanghai Research Institute
+            </div>
+            <div>
+                2019.9 - 2019.12, Exchange Study Abroad, Kyoto University Disaster Prevention Research Institute
+            </div>
+            <div>
+                2017 - 2020, Master in Soil and Water Conservation and Desertification Control, Chang'an University
+            </div>
+            <div>
+                2013 - 2017, Bachelor in Soil and Water Conservation and Ecological Engineering, Nanjing Forestry
+                University
+            </div>
+    </details>
 
     <div style="margin-top: 26px; margin-bottom: 28px; border: 0.8px solid #dddddd"></div>
 
     <h2>Publications and Patents</h2>
-    
+
     <table>
         <tr>
             <td width="25%">
                 <img src="pic/202309.jpg" width="100%">
             </td>
             <td width="75%">
-                <p> Spatiotemporal variations and risk characteristics of potential non-point source pollution driven by LUCC in the Loess Plateau Region, China</p>
+                <p> Spatiotemporal variations and risk characteristics of potential non-point source pollution driven by
+                    LUCC in the Loess Plateau Region, China</p>
                 <p style="line-height: 20px;">
-                     Jiqiang Lyu, Yuanjia Huang, <b>Qiyang Nie</b>, et al.
+                    Jiqiang Lyu, Yuanjia Huang, <b>Qiyang Nie</b>, et al.
                     <br><i>Frontiers In Ecology And Evolution </i>
                     <br> https://doi.org/10.3389/fevo.2023.1253328
-                    <a
-                        href="https://www.frontiersin.org/articles/10.3389/fevo.2023.1253328/full">[Paper]</a>
+                    <a href="https://www.frontiersin.org/articles/10.3389/fevo.2023.1253328/full">[Paper]</a>
                     <a
                         href="https://github.com/Nie7yang/Nie7yang.github.io/blob/main/paper/Spatiotemporal%20Variations%20and%20Risk%20Character.pdf">[PDF]</a>
                 </p>
@@ -216,7 +243,7 @@
     </table>
 
     <div style="border:10px solid #FFFFFF"></div>
-    
+
     <table>
         <tr>
             <td width="25%">
@@ -238,8 +265,8 @@
         </tr>
     </table>
     <div style="border:10px solid #FFFFFF"></div>
-    
-     <table>
+
+    <table>
         <tr>
             <td width="25%">
                 <img src="pic/chanba.png" width="100%">
@@ -260,7 +287,7 @@
         </tr>
     </table>
     <div style="border:10px solid #FFFFFF"></div>
-    
+
     <table>
         <tr>
             <td width="25%">
@@ -368,6 +395,12 @@
 
     <div style="border: 40px solid #FFFFFF"></div>
 
-</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const details = document.querySelector('details');
+            details.removeAttribute('open');
+        });
+    </script>
 
+</body>
 </html>
