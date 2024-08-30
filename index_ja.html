@@ -17,6 +17,8 @@
             line-height: 20px;
             color: #737373;
             margin: 10px 13px 10px 13px;
+            min-width: 650px;
+            margin: 0 auto;
         }
 
         p {
@@ -166,11 +168,20 @@
 
 <body marginheight="0">
     <!-- <h1>Nie Qiyang</h1> -->
-    <img src="pic/nieqiyang.png" alt="Nie Qiyang" style="width: 200px; height: auto;">
-    <div class="button-container">
-        <button onclick="window.location.href = 'index.html';">English</button>
-        <button onclick="window.location.href = 'index_zh.html';">中文</button>
-    </div>
+    <table>
+        <tr>
+            <td width="60%">
+                <img src="pic/nieqiyang.png" alt="Nie Qiyang" style="width: 200px; height: auto;">
+            </td>
+            <td width="14%" style="vertical-align: top;">
+                <div class="button-container">
+                    <button onclick="window.location.href = 'index.html';">English</button>
+                    <button onclick="window.location.href = 'index_zh.html';">中文</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+    
     <div style="margin-top: 32px; border: 0.8px solid #dddddd"></div>
 
     <table>
