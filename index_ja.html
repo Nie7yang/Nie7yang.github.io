@@ -1,363 +1,423 @@
-<html lang="ja">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Nie Qiyang</title>
-  <style id="system" type="text/css">
-    * {
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <title>Nie Qiyang</title>
+    <link rel="icon" href="pic/nie.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="pic/nie.ico" type="image/x-icon">
+    <style id="system" type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-      font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
-      font-size: 15px;
-      line-height: 20px;
-      color: #737373;
-      margin: 10px 13px 10px 13px;
-    }
+        body {
+            font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+            font-size: 15px;
+            line-height: 20px;
+            color: #737373;
+            margin: 10px 13px 10px 13px;
+        }
 
-    p {
-      margin-bottom: 9px;
-      text-align: justify;
-      text-justify: inter-character;
-    }
+        p {
+            margin-bottom: 9px;
+            text-align: justify;
+            text-justify: inter-character;
+        }
 
-    table {
-      border: 0;
-    }
+        table {
+            border: 0;
+        }
 
-    tr,
-    td {
-      font-size: 15px;
-      text-align: justify;
-      text-justify: inter-character;
-    }
+        tr,
+        td {
+            font-size: 15px;
+            text-align: justify;
+            text-justify: inter-character;
+        }
 
-    ul {
-      text-align: justify;
-      text-justify: inter-character;
-    }
+        ul {
+            text-align: justify;
+            text-justify: inter-character;
+        }
 
-    a {
-      color: #C39797;
-      text-decoration: none;
-    }
+        a {
+            color: #C39797;
+            text-decoration: none;
+        }
 
-    a:hover {
-      color: #8FBC8F;
-      text-decoration: none;
-    }
+        a:hover {
+            color: #8FBC8F;
+            text-decoration: none;
+        }
 
-    a img {
-      border: none;
-    }
+        a img {
+            border: none;
+        }
 
-    h1,
-    h2 {
-      color: rgb(126, 40, 40);
-      line-height: 30px;
-    }
+        h1,
+        h2 {
+            color: #ae452b;
+            line-height: 30px;
+        }
 
-    h1 {
-      margin-top: 50px;
-      margin-bottom: 0px;
-      font-size: 30px;
-    }
+        h1 {
+            margin-top: 50px;
+            margin-bottom: 0px;
+            font-size: 30px;
+        }
 
-    h2 {
-      margin-top: 10px;
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
+        h2 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
 
-    hr {
-      margin: 0 0 19px;
-      border: 0;
-      border-bottom: 1px solid #ccc;
-    }
+        hr {
+            margin: 0 0 19px;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+        }
 
-    button {
-      width: 55px;
-      height: 55px;
-      padding: 0;
-      font-size: 10px;
-      text-align: center;
-      font-weight: bold;
-      color: #0c0c0c;
-      border-radius: 15px;
-      cursor: pointer;
-      box-shadow: 9px 9px 15px rgba(0, 0, 0, 0.2),
-        -9px -9px 15px rgba(255, 255, 255, 1);
-      transition: all .2s ease-out;
-      border: 2px solid white;
-      display: inline;
-    }
+        button {
+            width: 55px;
+            height: 55px;
+            padding: 0;
+            font-size: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: #0c0c0c;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 9px 9px 15px rgba(0, 0, 0, 0.2),
+                -9px -9px 15px rgba(255, 255, 255, 1);
+            transition: all .2s ease-out;
+            border: 2px solid white;
+            display: inline;
+        }
 
-    .button-container {
-      text-align: right;
-    }
+        .button-container {
+            text-align: right;
+        }
 
-    .custom-button {
-      /* ...你的按钮样式... */
-      margin-left: 10px;
-    }
+        .custom-button {
+            /* ...你的按钮样式... */
+            margin-left: 10px;
+        }
 
-    /* 设置不同按钮的背景颜色 */
-    button:nth-child(1) {
-      color: rgb(47, 18, 177);
-    }
+        /* 设置不同按钮的背景颜色 */
+        button:nth-child(1) {
+            color: rgb(126, 40, 40);
+        }
 
-    button:nth-child(2) {
-      color: rgb(60, 75, 53);
-    }
+        button:nth-child(2) {
+            color: rgb(60, 75, 53);
+        }
 
-    button:hover {
-      cursor: pointer;
-      box-shadow: 0 0 0 rgba(0, 0, 0, 0.2),
-        0 0 0 rgba(255, 255, 255, 0.8),
-        inset 9px 9px 15px rgba(0, 0, 0, 0.1),
-        inset -9px -9px 15px rgba(255, 255, 255, 1);
-      filter: brightness(110%);
-      width: 50px;
-      height: 50px;
-    }
+        button:hover {
+            cursor: pointer;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0.2),
+                0 0 0 rgba(255, 255, 255, 0.8),
+                inset 9px 9px 15px rgba(0, 0, 0, 0.1),
+                inset -9px -9px 15px rgba(255, 255, 255, 1);
+            filter: brightness(110%);
+            width: 50px;
+            height: 50px;
+        }
 
-    .strike-through {
-      position: relative;
-      text-decoration: line-through;
-      /* 添加删除线效果 */
-    }
+        .strike-through {
+            position: relative;
+            text-decoration: line-through;
+            /* 添加删除线效果 */
+        }
 
-    .strike-through::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      /* 将线定位到文字的上方 */
-      left: 0;
-      height: 2px;
-      background-color: rgb(0, 0, 0);
-      /* 线的颜色 */
-    }
+        .strike-through::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            /* 将线定位到文字的上方 */
+            left: 0;
+            height: 2px;
+            background-color: rgb(0, 0, 0);
+            /* 线的颜色 */
+        }
 
-    @media screen and (min-width: 768px) {
-      body {
-        width: 748px;
-        margin: 10px auto;
-      }
-    }
-  </style>
+        @media screen and (min-width: 768px) {
+            body {
+                width: 748px;
+                margin: 10px auto;
+            }
+        }
+
+        details {
+            margin-bottom: 20px;
+        }
+
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
 </head>
 
 
 <body marginheight="0">
-  <h1>聶　啓陽（ニー　ケーヨー）</h1>
-  <div class="button-container">
-    <button onclick="window.location.href = 'index.html';">English</button>
-    <button onclick="window.location.href = 'index_zh.html';">中文</button>
-  </div>
-  <div style="margin-top: 32px; border: 0.8px solid #dddddd"></div>
+    <!-- <h1>Nie Qiyang</h1> -->
+    <img src="pic/nieqiyang.png" alt="Nie Qiyang" style="width: 200px; height: auto;">
+    <div class="button-container">
+        <button onclick="window.location.href = 'index_ja.html';">日本語</button>
+        <button onclick="window.location.href = 'index_zh.html';">中文</button>
+    </div>
+    <div style="margin-top: 32px; border: 0.8px solid #dddddd"></div>
 
-  <table>
-    <tr>
-      <td width="80%">
-        <p>M.S. | 水工エンジニア</p>
-        <p>北海道大学 大学院地球環境科学研究院 研究生</p>
-        <p>E-mail : nieqiyang@outlook.com</p>
-      </td>
-      <td width="20%">
-        <img src="pic/pic.jpg" width="100%">
-      </td>
-    </tr>
-  </table>
-
-  <div style="margin-bottom: 28px; border: 0.8px solid #dddddd"></div>
-
-  <h2>簡単な情報</h2>
-  <p>2020年から2023年まで、中国三峡集団上海設計研究院で水工技師として勤務し、
-    主砂防におよび環境関連の設計、評価、監視業務に従事していました。</p>
-  <p>令和二年に長安大学で修士号を取得しました。 </p>
-  <p>私の研究は主に水文シミュレーションに焦点を当てています。現在、私は
-    Environmental Fluid Dynamics Code (EFDC)を他の分散型水文モデルと
-    結合して、流域内の水環境を評価しています。</p>
-  <p>PS. 以前のFortranコードをPythonに変換する作業は一時的に中断しています。Pythonを使用して元の
-    Fortranモデルの計算結果の後処理を強化することが、より効率的な選択だ
-    と考えています。</p>
-
-  <div style="margin-top: 26px; margin-bottom: 28px; border: 0.8px solid #dddddd"></div>
-
-  <h2>履歴</h2>
-  <div>2020年 - 2023年：中国三峡集団上海設計研究院・中級エンジニア</div>
-  <div>2017年 - 2020年：長安大学大学院・修士課程修了</div>
-  <div>2019年9月 - 2019年12月：京都大学防災研究所・交換留学</div>
-  <div>2013年 - 2017年：南京林業大学・学士卒業</div>
-
-  <div style="margin-top: 26px; margin-bottom: 28px; border: 0.8px solid #dddddd"></div>
-
-  <h2>論文と特許</h2>
-  <table>
+    <table>
         <tr>
-            <td width="25%">
-                <img src="pic/202309.jpg" width="100%">
+            <td width="80%">
+                <p>博士後期課程学生 | 水工エンジニア</p>
+                <p>北海道大学 大学院地球環境科学研究院</p>
+                <p>メール : nieqiyang@outlook.com</p>
             </td>
-            <td width="75%">
-                <p> 中国黄土高原地域におけるLUCCによって引き起こされる潜在的な非点源汚染の時空間変動とリスク特性</p>
-                <p style="line-height: 20px;">
-                     Jiqiang Lyu, Yuanjia Huang, <b>Qiyang Nie</b>, et al.
-                    <br><i>Frontiers In Ecology And Evolution </i>
-                    <br> https://doi.org/10.3389/fevo.2023.1253328
-                    <a
-                        href="https://www.frontiersin.org/articles/10.3389/fevo.2023.1253328/full">[Paper]</a>
-                    <a
-                        href="https://github.com/Nie7yang/Nie7yang.github.io/blob/main/paper/Spatiotemporal%20Variations%20and%20Risk%20Character.pdf">[PDF]</a>
-                </p>
+            <td width="20%">
+                <img src="pic/pic.jpg" width="100%">
             </td>
         </tr>
     </table>
-    <div style="border:10px solid #FFFFFF"></div>
 
-  <table>
-    <tr>
-      <td width="25%">
-        <img src="pic/tiaoxi.png" width="100%">
-      </td>
-      <td width="75%">
-        <p> 両側平均変化点法に基づくデジタル川網の閾値の描画-南苕溪流域を例として</p>
-        <p style="line-height: 20px;">
-          <b>NIE Qiyang</b>
-          <br><i>Journal of Green Science and Technology</i>
-          <br>2022, DOI:10.16663/j.cnki.lskj.2022.10.040.
-          <a
-            href="https://oversea.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2019&filename=XBSZ201905013&uniplatform=OVERSEA&v=skc_4jnNf9c4zSk7AjV0oq82XTO9PNOeY_I-09Y6x3bIDVecq01u8KIas3EvYH6v">[Paper]</a>
-          <a
-            href="https://github.com/Nie7yang/Nie7yang.github.io/blob/main/paper/Delineation%20of%20Digital%20River%20Network%20Threshold%20Based%20on%20Two-sided%20Mean%20Change-Point%20Method%E2%80%94%E2%80%94Taking%20Nantiaoxi%20Watershed%20as%20an%20Example.pdf">[PDF]</a>
-        </p>
-      </td>
-    </tr>
-  </table>
-  <div style="border:10px solid #FFFFFF"></div>
+    <div style="margin-bottom: 28px; border: 0.8px solid #dddddd"></div>
 
-  <table>
-    <tr>
-      <td width="25%">
-        <img src="pic/chanba.png" width="100%">
-      </td>
-      <td width="75%">
-        <p> 灞河流域の土地利用変化に影響を受ける非点源汚染リスクの時空間変動</p>
-        <p style="line-height: 20px;">
-          <b>NIE Qiyang</b>, Lyu Jiqiang, et al.
-          <br><i>Journal of Water Resources and Water Engineering </i>
-          <br>2019,doi:CNKI:SUN:XBSZ.0.2019-05-013.
-          <a
-            href="https://oversea.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2019&filename=XBSZ201905013&uniplatform=OVERSEA&v=skc_4jnNf9c4zSk7AjV0oq82XTO9PNOeY_I-09Y6x3a7MCiZ7xz4BsptBxgS0Moj">[Paper]</a>
-          <a
-            href="https://github.com/Nie7yang/Nie7yang.github.io/blob/main/paper/Spatial%20and%20temporal%20variations%20of%20non-point%20source%20pollution%20risk%20affected%20by%20land%20use%20changes%20in%20Bahe%20River%20Basin.pdf">[PDF]</a>
-        </p>
-      </td>
-    </tr>
-  </table>
-  <div style="border:10px solid #FFFFFF"></div>
-  
-  <table>
-    <tr>
-      <td width="25%">
-        <img src="pic/senmon.png" width="100%">
-      </td>
-      <td width="75%">
-        <p> <b>発明特許:</b> 都市河川ゴムダム群の水生態調整方法</p>
-        <p style="line-height: 20px;">
-          Lyu Jiqiang,<b>NIE Qiyang</b>, Xue Qiang, et al.
-          <br>ZL201910414293.0
-          <a href="https://github.com/Nie7yang/Nie7yang.github.io/blob/main/paper/Invention%20Patent%20Certificate.pdf">[Invention
-            Patent Certificate]</a>
-          <a
-            href="https://github.com/Nie7yang/Nie7yang.github.io/blob/main/paper/Invention%20Patent%20Specification.pdf">[Invention
-            Patent Specification]</a>
-        </p>
-      </td>
-    </tr>
-  </table>
+    <h2>情報</h2>
+    <p>やあ！僕は君の近所の友好的な水遁忍者だ！いつか水の科学の力で火影忍者を倒せるかもしれないぞ。</p>
+    <p>🌊 僕の研究興味は水資源、水環境、そして地理学を包括しているんだ。河川と湖のサンドボックスゲームを想像してみてくれ！</p>
+    <p>🤖 最近、AIと仲良くなろうとしているんだ。大規模言語モデルを使って、水系システムの理解を超パワーアップしようとしているんだ。</p>
+    <p>🎮 僕の究極の忍術は何かって？複雑な水の科学を、やめられないほど面白いゲームに変えることさ！</p>
 
-  <div style="border:10px solid #FFFFFF"></div>
+    <div style="margin-top: 26px; margin-bottom: 28px; border: 0.8px solid #dddddd"></div>
+
+    <details>
+        <summary>
+            <h2>履歴</h2>
+        </summary>
+        <table style="width:100%; border-collapse: collapse;">
+            <tr>
+              <th style="border: 1px solid black; padding: 8px; text-align: left;">時間</th>
+              <th style="border: 1px solid black; padding: 8px; text-align: left;">機関</th>
+              <th style="border: 1px solid black; padding: 8px; text-align: left;">役割</th>
+            </tr>
+            <tr>
+              <td style="border: 1px solid black; padding: 8px;">2024 - </td>
+              <td style="border: 1px solid black; padding: 8px;">北海道大学</td>
+              <td style="border: 1px solid black; padding: 8px;">博士後期課程</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid black; padding: 8px;">2023 - 2024</td>
+              <td style="border: 1px solid black; padding: 8px;">北海道大学</td>
+              <td style="border: 1px solid black; padding: 8px;">研究生</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid black; padding: 8px;">2020 - 2023</td>
+              <td style="border: 1px solid black; padding: 8px;">上海設計研究院</td>
+              <td style="border: 1px solid black; padding: 8px;">エンジニア</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid black; padding: 8px;">2019.9 - 2019.12</td>
+              <td style="border: 1px solid black; padding: 8px;">京都大学 防災研究所</td>
+              <td style="border: 1px solid black; padding: 8px;">交換留学</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid black; padding: 8px;">2017 - 2020</td>
+              <td style="border: 1px solid black; padding: 8px;">長安大学</td>
+              <td style="border: 1px solid black; padding: 8px;">修士課程修了</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid black; padding: 8px;">2013 - 2017</td>
+              <td style="border: 1px solid black; padding: 8px;">南京林業大学</td>
+              <td style="border: 1px solid black; padding: 8px;">学士卒業</td>
+            </tr>
+          </table>
+    </details>
+
+    <div style="margin-top: 26px; margin-bottom: 28px; border: 0.8px solid #dddddd"></div>
+
+    <details>
+        <summary>
+            <h2>論文と特許</h2>
+        </summary>
+        <table>
+            <tr>
+                <td width="25%">
+                    <img src="pic/202309.jpg" width="100%">
+                </td>
+                <td width="75%">
+                    <p> 中国黄土高原地域におけるLUCCによって引き起こされる潜在的な非点源汚染の時空間変動とリスク特性</p>
+                    <p style="line-height: 20px;">
+                        Jiqiang Lyu, Yuanjia Huang, <b>Qiyang Nie</b>, et al.
+                        <br><i>Frontiers In Ecology And Evolution </i>
+                        <br> https://doi.org/10.3389/fevo.2023.1253328
+                        <a href="https://www.frontiersin.org/articles/10.3389/fevo.2023.1253328/full">[Paper]</a>
+                        <a
+                            href="https://github.com/Nie7yang/Nie7yang.github.io/blob/main/paper/Spatiotemporal%20Variations%20and%20Risk%20Character.pdf">[PDF]</a>
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <div style="border:10px solid #FFFFFF"></div>
+
+        <table>
+            <tr>
+                <td width="25%">
+                    <img src="pic/tiaoxi.png" width="100%">
+                </td>
+                <td width="75%">
+                    <p> 両側平均変化点法に基づくデジタル川網の閾値の描画-南苕溪流域を例として</p>
+                    <p style="line-height: 20px;">
+                        <b>NIE Qiyang</b>
+                        <br><i>Journal of Green Science and Technology</i>
+                        <br>2022, DOI:10.16663/j.cnki.lskj.2022.10.040.
+                        <a
+                            href="https://oversea.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2022&filename=LVKJ202210059&uniplatform=OVERSEA&v=WHNMSyR8-JvYfhzboiq8mgDY4PsadB4TIgQLeaytAvoojddgAoJxFWbvSLBf8EiF">[Paper]</a>
+                        <a
+                            href="https://github.com/Nie7yang/Nie7yang.github.io/blob/main/paper/Delineation%20of%20Digital%20River%20Network%20Threshold%20Based%20on%20Two-sided%20Mean%20Change-Point%20Method%E2%80%94%E2%80%94Taking%20Nantiaoxi%20Watershed%20as%20an%20Example.pdf">[PDF]</a>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <div style="border:10px solid #FFFFFF"></div>
+
+        <table>
+            <tr>
+                <td width="25%">
+                    <img src="pic/chanba.png" width="100%">
+                </td>
+                <td width="75%">
+                    <p> 灞河流域の土地利用変化に影響を受ける非点源汚染リスクの時空間変動</p>
+                    <p style="line-height: 20px;">
+                        <b>NIE Qiyang</b>, Lyu Jiqiang, et al.
+                        <br><i>Journal of Water Resources and Water Engineering </i>
+                        <br>2019,doi:CNKI:SUN:XBSZ.0.2019-05-013.
+                        <a
+                            href="https://oversea.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2019&filename=XBSZ201905013&uniplatform=OVERSEA&v=skc_4jnNf9c4zSk7AjV0oq82XTO9PNOeY_I-09Y6x3bIDVecq01u8EjY3lb8bGhG">[Paper]</a>
+                        <a
+                            href="https://github.com/Nie7yang/Nie7yang.github.io/blob/main/paper/Spatial%20and%20temporal%20variations%20of%20non-point%20source%20pollution%20risk%20affected%20by%20land%20use%20changes%20in%20Bahe%20River%20Basin.pdf">[PDF]</a>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <div style="border:10px solid #FFFFFF"></div>
+
+        <table>
+            <tr>
+                <td width="25%">
+                    <img src="pic/senmon.png" width="100%">
+                </td>
+                <td width="75%">
+                    <p> <b>発明特許:</b> 都市河川ゴムダム群の水生態調整方法</p>
+                    <p style="line-height: 20px;">
+                        Lyu Jiqiang,<b>NIE Qiyang</b>, Xue Qiang, et al.
+                        <br>ZL201910414293.0
+                        <a
+                            href="https://github.com/Nie7yang/Nie7yang.github.io/blob/main/paper/Invention%20Patent%20Certificate.pdf">[Invention
+                            Patent Certificate]</a>
+                        <a
+                            href="https://github.com/Nie7yang/Nie7yang.github.io/blob/main/paper/Invention%20Patent%20Specification.pdf">[Invention
+                            Patent Specification]</a>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <div style="border:10px solid #FFFFFF"></div>
+    </details>
 
 
+    <div style="margin-top: 26px; margin-bottom: 28px; border: 0.8px solid #dddddd"></div>
 
-  <div style="margin-top: 26px; margin-bottom: 28px; border: 0.8px solid #dddddd"></div>
+    <details>
+        <summary>
+            <h2>プロジェクト</h2>
+        </summary>
+        <table>
+            <tr>
+                <td width="25%">
+                    <img src="pic/soft.png" width="100%">
+                </td>
+                <td width="75%">
+                    <p> 高解像度DEMおよびDOMデータに基づく浸食予測と評価のためのデジタルソフトウェアの開発</p>
+                    <p style="line-height: 20px;">
+                        <b>研究代表者</b>
+                        <br><i>中国三峡集团上海設計研究院企業科学技術標準プロジェクト</i>
+                        <br>¥114.5w 2022.7~2023.12
+                </td>
+            </tr>
+        </table>
+        <div style="border:10px solid #FFFFFF"></div>
 
-  <h2>主なプロジェクト</h2>
-  <table>
-    <tr>
-      <td width="25%">
-        <img src="pic/soft.png" width="100%">
-      </td>
-      <td width="75%">
-        <p> "高解像度DEMおよびDOMデータに基づく浸食予測と評価のためのデジタルソフトウェアの開発。"</p>
-        <p style="line-height: 20px;">
-          <b>研究代表者</b>
-          <br><i>中国三峡集团上海設計研究院企業科学技術標準プロジェクト</i>
-          <br>¥114.5w 2022.7~2023.12
-      </td>
-    </tr>
-  </table>
-  <div style="border:10px solid #FFFFFF"></div>
+        <table>
+            <tr>
+                <td width="25%">
+                    <img src="pic/Kyoto.png" width="100%">
+                </td>
+                <td width="75%">
+                    <p> 中国北西部の黄土高原における気候と人間活動の洪水災害への影響</p>
+                    <p style="line-height: 20px;">
+                        <b>主要参加者</b>
+                        <br><i>京都大学防災研究所の国際共同研究プロジェクト (2019W-02)</i>
+                        <br>
+                </td>
+            </tr>
+        </table>
+        <div style="border:10px solid #FFFFFF"></div>
 
-  <table>
-    <tr>
-      <td width="25%">
-        <img src="pic/Kyoto.png" width="100%">
-      </td>
-      <td width="75%">
-        <p> 中国北西部の黄土高原における気候と人間活動の洪水災害への影響</p>
-        <p style="line-height: 20px;">
-          <b>主要参加者</b>
-          <br><i>京都大学防災研究所の国際共同研究プロジェクト (2019W-02)</i>
-          <br>
-      </td>
-    </tr>
-  </table>
-  <div style="border:10px solid #FFFFFF"></div>
+        <table>
+            <tr>
+                <td width="25%">
+                    <img src="pic/urban.png" width="100%">
+                </td>
+                <td width="75%">
+                    <p> 都市雨水ビッグデータ早期警戒メカニズム、資源利用理論、および海綿都市デザイン手法</p>
+                    <p style="line-height: 20px;">
+                        <b>参加者</b>
+                        <br><i>中国科学技術部——重要な研究開発プロジェクト (2018YFE0103800)</i>
+                        <br>
+                </td>
+            </tr>
+        </table>
+        <div style="border:10px solid #FFFFFF"></div>
 
-  <table>
-    <tr>
-      <td width="25%">
-        <img src="pic/urban.png" width="100%">
-      </td>
-      <td width="75%">
-        <p> 都市雨水ビッグデータ早期警戒メカニズム、資源利用理論、および海綿都市デザイン手法</p>
-        <p style="line-height: 20px;">
-          <b>参加者</b>
-          <br><i>中国科学技術部——重要な研究開発プロジェクト (2018YFE0103800)</i>
-          <br>
-      </td>
-    </tr>
-  </table>
-  <div style="border:10px solid #FFFFFF"></div>
+        <table>
+            <tr>
+                <td width="25%">
+                    <img src="pic/runoff.png" width="100%">
+                </td>
+                <td width="75%">
+                    <p> 変動環境下の黄土高原での流出変動メカニズムの研究</p>
+                    <p style="line-height: 20px;">
+                        <b>参加者</b>
+                        <br><i>中国国家自然科学基金 (51679185)</i>
+                        <br>
+                </td>
+            </tr>
+        </table>
+        <div style="border:10px solid #FFFFFF"></div>
+    </details>
 
-  <table>
-    <tr>
-      <td width="25%">
-        <img src="pic/runoff.png" width="100%">
-      </td>
-      <td width="75%">
-        <p> 変動環境下の黄土高原での流出変動メカニズムの研究</p>
-        <p style="line-height: 20px;">
-          <b>参加者</b>
-          <br><i>中国国家自然科学基金 (51679185)</i>
-          <br>
-      </td>
-    </tr>
-  </table>
-  <div style="border:10px solid #FFFFFF"></div>
+    <div style="margin-top: 26px; margin-bottom: 28px; border: 0.8px solid #dddddd"></div>
 
+    <p style="text-align:center;">
+        [<a href="mailto:nieqiyang@outlook.com"> 連絡先をお知らせください </a>],
+        [<a href="https://github.com/Nie7yang"> GitHub </a>],
+        [<a href="./tools/tools.html"> Tools </a>]</p>
 
-  <div style="margin-top: 26px; margin-bottom: 28px; border: 0.8px solid #dddddd"></div>
+    <div style="border: 40px solid #FFFFFF"></div>
 
-  <p style="text-align:center;">
-    [<a href="mailto:nieqiyang@outlook.com"> 連絡先をお知らせください </a>],
-    [<a href="https://github.com/Nie7yang"> GitHub </a>],
-    [<a href="./tools/tools.html"> Tools </a>]</p>
-
-  <div style="border: 40px solid #FFFFFF"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const details = document.querySelector('details');
+            details.removeAttribute('open');
+        });
+    </script>
 
 </body>
 
